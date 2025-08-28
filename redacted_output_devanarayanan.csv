@@ -1,0 +1,501 @@
+record_id,redacted_data_json,is_pii,confidence_score,reason
+1,"{""customer_id"": ""CUST001"", ""phone"": ""98XXXXXX10"", ""order_value"": 1299}",True,0.9,found solo pii [phone]
+2,"{""name"": ""RaXXXXXXXXar"", ""email"": ""raXXXXXXXXar@email.com"", ""city"": ""Mumbai""}",True,0.9,found combo pii [name+email]
+3,"{""first_name"": ""Priya"", ""product"": ""iPhone 14"", ""category"": ""Electronics""}",False,0.0,No PII detected
+4,"{""aadhar"": ""12XXXXXXXX12"", ""transaction_type"": ""purchase""}",True,1.0,found solo pii [aadhar]
+5,"{""email"": ""standalone@email.com"", ""product_id"": ""PROD123""}",False,0.0,No PII detected
+6,"{""name"": ""Amit Singh"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+7,"{""city"": ""Delhi"", ""pin_code"": ""110001"", ""product_category"": ""Fashion""}",False,0.0,No PII detected
+8,"{""upi_id"": ""usXXX23@paytm"", ""amount"": 500}",True,0.8,found solo pii [upi_id]
+9,"{""last_name"": ""Sharma"", ""order_id"": ""ORD789456""}",False,0.0,No PII detected
+10,"{""passport"": ""P1XXXX67"", ""booking_reference"": ""BK123""}",True,1.0,found solo pii [passport]
+11,"{""device_id"": ""DEV456789"", ""app_version"": ""2.1.4""}",False,0.0,No PII detected
+12,"{""name"": ""SnXXXXXXXel"", ""email"": ""snXXXXXXXel@gmail.com"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+13,"{""transaction_id"": ""TXN987654"", ""amount"": 2500, ""status"": ""completed""}",False,0.0,No PII detected
+14,"{""phone"": ""87XXXXXX09"", ""order_date"": ""2024-01-15""}",True,0.9,found solo pii [phone]
+15,"{""state"": ""Maharashtra"", ""product_name"": ""Laptop Bag""}",False,0.0,No PII detected
+16,"{""name"": ""ViXXXXXXXXdy"", ""address"": ""456 Brigade Road, Bengaluru, 560025"", ""email"": ""viXXam@company.com""}",True,0.9,found combo pii [name+email]
+17,"{""first_name"": ""Anita"", ""last_name_initial"": ""K"", ""age"": 28}",False,0.0,No PII detected
+18,"{""aadhar"": ""98XXXXXXXX98"", ""verification_status"": ""verified""}",True,1.0,found solo pii [aadhar]
+19,"{""email"": ""customer@service.com"", ""query_type"": ""refund""}",False,0.0,No PII detected
+20,"{""upi_id"": ""91XXXXXX80@ybl"", ""merchant"": ""Flipkart""}",True,0.8,found solo pii [upi_id]
+21,"{""product_description"": ""Samsung Galaxy S23"", ""price"": 65000}",False,0.0,No PII detected
+22,"{""name"": ""DeXXXXXXXXXXXal"", ""phone"": ""78XXXXXX56"", ""email"": ""deXXXka@email.com""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+23,"{""pin_code"": ""400001"", ""delivery_date"": ""2024-02-10""}",False,0.0,No PII detected
+24,"{""passport"": ""M9XXXX43"", ""travel_date"": ""2024-03-15""}",True,1.0,found solo pii [passport]
+25,"{""customer_segment"": ""Premium"", ""loyalty_points"": 1500}",False,0.0,No PII detected
+26,"{""name"": ""Ravi Gupta"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+27,"{""order_type"": ""Express"", ""shipping_method"": ""same_day""}",False,0.0,No PII detected
+28,"{""phone"": ""67XXXXXX45"", ""sms_consent"": true}",True,0.9,found solo pii [phone]
+29,"{""username"": ""techguru"", ""last_login"": ""2024-01-20""}",False,0.0,No PII detected
+30,"{""aadhar"": ""45XXXXXXXX45"", ""kyc_status"": ""pending""}",True,1.0,found solo pii [aadhar]
+31,"{""category"": ""Books"", ""author"": ""Chetan Bhagat""}",False,0.0,No PII detected
+32,"{""name"": ""MeXXXXXXXhi"", ""email"": ""meXXX.j@workplace.com"", ""device_type"": ""Android""}",True,0.9,found combo pii [name+email]
+33,"{""session_id"": ""SESS789123"", ""duration"": ""45 minutes""}",False,0.0,No PII detected
+34,"{""upi_id"": ""meXXXXnt@okaxis"", ""payment_method"": ""UPI""}",True,0.8,found solo pii [upi_id]
+35,"{""region"": ""North India"", ""warehouse_code"": ""WH001""}",False,0.0,No PII detected
+36,"{""name"": ""Arjun Malhotra"", ""address"": ""321 Connaught Place, New Delhi, 110001"", ""phone"": ""90XXXXXX78""}",True,0.9,found solo pii [phone]
+37,"{""subscription_type"": ""Premium"", ""renewal_date"": ""2024-06-15""}",False,0.0,No PII detected
+38,"{""passport"": ""L5XXXX01"", ""country"": ""India""}",True,1.0,found solo pii [passport]
+39,"{""first_name"": ""Kavya"", ""gender"": ""Female"", ""age_group"": ""25-35""}",False,0.0,No PII detected
+40,"{""aadhar"": ""23XXXXXXXX23"", ""bank_verification"": ""success""}",True,1.0,found solo pii [aadhar]
+41,"{""brand"": ""Nike"", ""model"": ""Air Max"", ""size"": ""9""}",False,0.0,No PII detected
+42,"{""name"": ""SiXXXXXXXXXXir"", ""email"": ""siXXXXir@tech.com"", ""ip_address"": ""203.192.1.45""}",True,0.9,found combo pii [name+email]
+43,"{""currency"": ""INR"", ""exchange_rate"": 83.25}",False,0.0,No PII detected
+44,"{""phone"": ""89XXXXXX67"", ""notification_preference"": ""SMS""}",True,0.9,found solo pii [phone]
+45,"{""product_rating"": 4.5, ""review_count"": 150}",False,0.0,No PII detected
+46,"{""upi_id"": ""faXXXXXXXXXnt@ibl"", ""family_size"": 4}",True,0.8,found solo pii [upi_id]
+47,"{""zip_code"": ""560001"", ""delivery_zone"": ""Zone_A""}",False,0.0,No PII detected
+48,"{""name"": ""PoXXXXXXXai"", ""address"": ""567 FC Road, Pune, 411016"", ""email"": ""poXXXXXXXai@email.in""}",True,0.9,found combo pii [name+email]
+49,"{""app_name"": ""Flipkart"", ""version"": ""8.21.0""}",False,0.0,No PII detected
+50,"{""passport"": ""K1XXXX02"", ""issue_date"": ""2020-05-10""}",True,1.0,found solo pii [passport]
+51,"{""last_name"": ""Iyer"", ""profession"": ""Software Engineer""}",False,0.0,No PII detected
+52,"{""aadhar"": ""34XXXXXXXX34"", ""address_proof"": ""verified""}",True,1.0,found solo pii [aadhar]
+53,"{""email"": ""support@flipkart.com"", ""ticket_id"": ""TICK456""}",False,0.0,No PII detected
+54,"{""name"": ""RaXXXXXXXXXXan"", ""phone"": ""70XXXXXX89"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found solo pii [phone], found combo pii [name+device_id]"
+55,"{""search_query"": ""bluetooth headphones"", ""filters"": ""price,brand""}",False,0.0,No PII detected
+56,"{""upi_id"": ""87XXXXXX01@paytm"", ""auto_debit"": true}",True,0.8,found solo pii [upi_id]
+57,"{""state_code"": ""MH"", ""gst_number"": ""27ABCDE1234F1Z5""}",False,0.0,No PII detected
+58,"{""name"": ""LaXXXXXXXXXXat"", ""email"": ""laXXXXX.v@company.org"", ""address"": ""890 Anna Salai, Chennai, 600002""}",True,0.9,found combo pii [name+email]
+59,"{""feature_flag"": ""new_checkout"", ""enabled"": true}",False,0.0,No PII detected
+60,"{""phone"": ""93XXXXXX12"", ""otp_verification"": ""pending""}",True,0.9,found solo pii [phone]
+61,"{""discount_code"": ""SAVE20"", ""validity"": ""2024-03-31""}",False,0.0,No PII detected
+62,"{""passport"": ""A9XXXX43"", ""nationality"": ""Indian""}",True,1.0,found solo pii [passport]
+63,"{""first_name"": ""Rohan"", ""wishlist_count"": 15}",False,0.0,No PII detected
+64,"{""aadhar"": ""56XXXXXXXX56"", ""biometric_status"": ""matched""}",True,1.0,found solo pii [aadhar]
+65,"{""payment_gateway"": ""Razorpay"", ""transaction_fee"": 25}",False,0.0,No PII detected
+66,"{""name"": ""Nisha Bansal"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+67,"{""inventory_id"": ""INV789"", ""stock_level"": 50}",False,0.0,No PII detected
+68,"{""upi_id"": ""buXXXXss@axisbank"", ""merchant_category"": ""retail""}",True,0.8,found solo pii [upi_id]
+69,"{""city"": ""Hyderabad"", ""weather"": ""partly_cloudy""}",False,0.0,No PII detected
+70,"{""phone"": ""84XXXXXX23"", ""call_preference"": ""evening""}",True,0.9,found solo pii [phone]
+71,"{""coupon_code"": ""FIRST10"", ""usage_count"": 1}",False,0.0,No PII detected
+72,"{""name"": ""KaXXXXXXXXXXXXXXXan"", ""email"": ""kaXXXXX.s@work.com"", ""device_type"": ""iOS""}",True,0.9,found combo pii [name+email]
+73,"{""logistics_partner"": ""BlueDart"", ""tracking_id"": ""BD123456789""}",False,0.0,No PII detected
+74,"{""passport"": ""H2XXXX13"", ""expiry_date"": ""2030-12-15""}",True,1.0,found solo pii [passport]
+75,"{""age"": 32, ""income_bracket"": ""middle_class""}",False,0.0,No PII detected
+76,"{""aadhar"": ""67XXXXXXXX67"", ""mobile_linked"": true}",True,1.0,found solo pii [aadhar]
+77,"{""return_reason"": ""size_issue"", ""refund_amount"": 899}",False,0.0,No PII detected
+78,"{""name"": ""DiXXXXXXXXma"", ""phone"": ""71XXXXXX90"", ""email"": ""diXya@personal.com""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+79,"{""seller_id"": ""SELLER001"", ""rating"": 4.2}",False,0.0,No PII detected
+80,"{""upi_id"": ""****@hdfcbank"", ""settlement_cycle"": ""T+2""}",True,0.8,found solo pii [upi_id]
+81,"{""recommendation_type"": ""collaborative"", ""confidence"": 0.85}",False,0.0,No PII detected
+82,"{""name"": ""MaXXXXXXXXXXal"", ""address"": ""456 Mall Road, Shimla, 171001"", ""email"": ""maXXXXXag@email.com""}",True,0.9,found combo pii [name+email]
+83,"{""api_version"": ""v2.1"", ""response_time"": ""120ms""}",False,0.0,No PII detected
+84,"{""phone"": ""95XXXXXX23"", ""language_preference"": ""Hindi""}",True,0.9,found solo pii [phone]
+85,"{""last_name"": ""Reddy"", ""occupation"": ""Doctor""}",False,0.0,No PII detected
+86,"{""passport"": ""T3XXXX70"", ""visa_required"": false}",True,1.0,found solo pii [passport]
+87,"{""affiliate_id"": ""AFF789"", ""commission_rate"": 5}",False,0.0,No PII detected
+88,"{""aadhar"": ""78XXXXXXXX78"", ""ekyc_timestamp"": ""2024-01-15T10:30:00Z""}",True,1.0,found solo pii [aadhar]
+89,"{""utm_source"": ""google"", ""campaign"": ""winter_sale""}",False,0.0,No PII detected
+90,"{""name"": ""AnXXXXXXao"", ""email"": ""anXXXXXXao@university.edu"", ""ip_address"": ""157.49.183.29""}",True,0.9,found combo pii [name+email]
+91,"{""fraud_score"": 0.15, ""risk_level"": ""low""}",False,0.0,No PII detected
+92,"{""upi_id"": ""78XXXXXX56@ybl"", ""bank_name"": ""State Bank""}",True,0.8,found solo pii [upi_id]
+93,"{""search_filter"": ""electronics"", ""sort_by"": ""price_low_to_high""}",False,0.0,No PII detected
+94,"{""phone"": ""82XXXXXX90"", ""two_factor_auth"": true}",True,0.9,found solo pii [phone]
+95,"{""first_name"": ""Arun"", ""cart_value"": 2500}",False,0.0,No PII detected
+96,"{""name"": ""Preeti Kulkarni"", ""address"": ""789 Law Garden, Ahmedabad, 380006"", ""phone"": ""67XXXXXX45""}",True,0.9,found solo pii [phone]
+97,"{""machine_learning_model"": ""recommendation_v3"", ""accuracy"": 0.92}",False,0.0,No PII detected
+98,"{""passport"": ""R7XXXX52"", ""place_of_issue"": ""Mumbai""}",True,1.0,found solo pii [passport]
+99,"{""city"": ""Bangalore"", ""traffic_condition"": ""moderate""}",False,0.0,No PII detected
+100,"{""aadhar"": ""89XXXXXXXX89"", ""consent_given"": true}",True,1.0,found solo pii [aadhar]
+101,"{""email"": ""newsletter@flipkart.com"", ""unsubscribe_rate"": 0.02}",False,0.0,No PII detected
+102,"{""name"": ""SuXXXXXXXXXai"", ""email"": ""suXXXXXXXXXai@office.com"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+103,"{""performance_metric"": ""page_load_time"", ""value"": ""2.1s""}",False,0.0,No PII detected
+104,"{""upi_id"": ""quXXXXay@kotak"", ""limit_daily"": 50000}",True,0.8,found solo pii [upi_id]
+105,"{""last_name"": ""Gupta"", ""education"": ""MBA""}",False,0.0,No PII detected
+106,"{""phone"": ""79XXXXXX67"", ""marketing_consent"": false}",True,0.9,found solo pii [phone]
+107,"{""analytics_event"": ""product_view"", ""timestamp"": ""2024-01-20T14:22:33Z""}",False,0.0,No PII detected
+108,"{""name"": ""RaXXXXXXXin"", ""address"": ""321 Residency Road, Mysore, 570001"", ""email"": ""raXXmi@workplace.in""}",True,0.9,found combo pii [name+email]
+109,"{""cache_hit_ratio"": 0.78, ""response_cached"": true}",False,0.0,No PII detected
+110,"{""passport"": ""S9XXXX41"", ""passport_type"": ""ordinary""}",True,1.0,found solo pii [passport]
+111,"{""first_name"": ""Vivek"", ""subscription_status"": ""active""}",False,0.0,No PII detected
+112,"{""aadhar"": ""90XXXXXXXX90"", ""demographic_verified"": true}",True,1.0,found solo pii [aadhar]
+113,"{""a_b_test"": ""checkout_flow_v2"", ""variant"": ""B""}",False,0.0,No PII detected
+114,"{""name"": ""KaXXXXXXXXon"", ""phone"": ""83XXXXXX01"", ""email"": ""kaXXXXXXXXon@gmail.com""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+115,"{""geo_location"": ""lat:12.9716,lng:77.5946"", ""accuracy"": ""10m""}",False,0.0,No PII detected
+116,"{""upi_id"": ""65XXXXXX87@paytm"", ""merchant_type"": ""individual""}",True,0.8,found solo pii [upi_id]
+117,"{""database_query"": ""SELECT * FROM products"", ""execution_time"": ""45ms""}",False,0.0,No PII detected
+118,"{""phone"": ""98XXXXXX10"", ""device_brand"": ""Samsung""}",True,0.9,found solo pii [phone]
+119,"{""last_name"": ""Singh"", ""marital_status"": ""married""}",False,0.0,No PII detected
+120,"{""name"": ""Aarav Pandey"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+121,"{""content_type"": ""application/json"", ""encoding"": ""utf-8""}",False,0.0,No PII detected
+122,"{""passport"": ""Q8XXXX19"", ""biometric_enrolled"": true}",True,1.0,found solo pii [passport]
+123,"{""city"": ""Coimbatore"", ""pincode"": ""641001""}",False,0.0,No PII detected
+124,"{""aadhar"": ""01XXXXXXXX01"", ""otp_verified"": true}",True,1.0,found solo pii [aadhar]
+125,"{""recommendation_engine"": ""neural_cf"", ""training_date"": ""2024-01-01""}",False,0.0,No PII detected
+126,"{""name"": ""GeXXXXXXXXan"", ""email"": ""geXXXXXXXXan@company.com"", ""device_type"": ""Desktop""}",True,0.9,found combo pii [name+email]
+127,"{""webhook_url"": ""https://api.example.com/webhook"", ""status"": ""active""}",False,0.0,No PII detected
+128,"{""upi_id"": ""shXXXXng@icici"", ""autopay_enabled"": false}",True,0.8,found solo pii [upi_id]
+129,"{""first_name"": ""Mohit"", ""preferred_language"": ""English""}",False,0.0,No PII detected
+130,"{""phone"": ""74XXXXXX12"", ""carrier"": ""Airtel""}",True,0.9,found solo pii [phone]
+131,"{""inventory_turnover"": 4.2, ""stock_out_rate"": 0.08}",False,0.0,No PII detected
+132,"{""name"": ""Shweta Kapoor"", ""address"": ""987 Sector 15, Noida, 201301"", ""phone"": ""80XXXXXX79""}",True,0.9,found solo pii [phone]
+133,"{""service_level"": ""premium"", ""response_time_sla"": ""< 1 hour""}",False,0.0,No PII detected
+134,"{""passport"": ""B1XXXX83"", ""emergency_contact"": ""+91-9876543210""}",True,1.0,found solo pii [passport]
+135,"{""last_name"": ""Nair"", ""hobby"": ""photography""}",False,0.0,No PII detected
+136,"{""aadhar"": ""12XXXXXXXX54"", ""photo_verification"": ""passed""}",True,1.0,found solo pii [aadhar]
+137,"{""feature_toggle"": ""new_ui"", ""rollout_percentage"": 25}",False,0.0,No PII detected
+138,"{""name"": ""HaXXXXXXXXar"", ""email"": ""haXXXXXXXXar@tech.org"", ""ip_address"": ""203.88.138.42""}",True,0.9,found combo pii [name+email]
+139,"{""data_pipeline"": ""etl_v2"", ""processed_records"": 1000000}",False,0.0,No PII detected
+140,"{""upi_id"": ""54XXXXXX76@ybl"", ""transaction_limit"": 100000}",True,0.8,found solo pii [upi_id]
+141,"{""search_algorithm"": ""elasticsearch"", ""index_size"": ""2.5GB""}",False,0.0,No PII detected
+142,"{""phone"": ""91XXXXXX89"", ""roaming_status"": false}",True,0.9,found solo pii [phone]
+143,"{""city"": ""Kochi"", ""state"": ""Kerala""}",False,0.0,No PII detected
+144,"{""name"": ""RiXXXXXXXXXna"", ""address"": ""234 Park Avenue, Gurgaon, 122001"", ""email"": ""riXXka@company.net""}",True,0.9,found combo pii [name+email]
+145,"{""microservice"": ""user_service"", ""health_status"": ""healthy""}",False,0.0,No PII detected
+146,"{""passport"": ""N6XXXX07"", ""pages_remaining"": 28}",True,1.0,found solo pii [passport]
+147,"{""first_name"": ""Deepak"", ""loyalty_tier"": ""gold""}",False,0.0,No PII detected
+148,"{""aadhar"": ""23XXXXXXXX65"", ""fingerprint_matched"": true}",True,1.0,found solo pii [aadhar]
+149,"{""cdn_cache"": ""cloudflare"", ""hit_ratio"": 0.89}",False,0.0,No PII detected
+150,"{""name"": ""PrXXXXXXXXXXXXXXry"", ""phone"": ""78XXXXXX56"", ""email"": ""prXXXXXX.c@personal.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+151,"{""log_level"": ""INFO"", ""message"": ""Transaction completed successfully""}",False,0.0,No PII detected
+152,"{""upi_id"": ""faXXly@sbi"", ""beneficiary_count"": 3}",True,0.8,found solo pii [upi_id]
+153,"{""machine_id"": ""ML789"", ""cpu_utilization"": 65}",False,0.0,No PII detected
+154,"{""phone"": ""85XXXXXX23"", ""do_not_disturb"": true}",True,0.9,found solo pii [phone]
+155,"{""last_name"": ""Mishra"", ""department"": ""Engineering""}",False,0.0,No PII detected
+156,"{""name"": ""Aditi Bhatt"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+157,"{""kubernetes_pod"": ""api-server-v2"", ""replicas"": 3}",False,0.0,No PII detected
+158,"{""passport"": ""G7XXXX29"", ""sponsor_required"": false}",True,1.0,found solo pii [passport]
+159,"{""city"": ""Indore"", ""region"": ""Central India""}",False,0.0,No PII detected
+160,"{""aadhar"": ""34XXXXXXXX76"", ""iris_scan"": ""verified""}",True,1.0,found solo pii [aadhar]
+161,"{""email"": ""admin@system.com"", ""role"": ""system_admin""}",False,0.0,No PII detected
+162,"{""name"": ""SaXXXXXXXXhi"", ""email"": ""saXXXXXXXXhi@workplace.com"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+163,"{""ssl_certificate"": ""valid"", ""expiry"": ""2024-12-31""}",False,0.0,No PII detected
+164,"{""upi_id"": ""43XXXXXX65@okaxis"", ""insurance_linked"": true}",True,0.8,found solo pii [upi_id]
+165,"{""first_name"": ""Neha"", ""age_verification"": ""completed""}",False,0.0,No PII detected
+166,"{""phone"": ""92XXXXXX90"", ""backup_number"": ""+91-8765432109""}",True,0.9,found solo pii [phone]
+167,"{""monitoring_alert"": ""high_memory_usage"", ""threshold_exceeded"": true}",False,0.0,No PII detected
+168,"{""name"": ""Vishal Agarwal"", ""address"": ""890 Commercial Street, Bangalore, 560001"", ""phone"": ""73XXXXXX01""}",True,0.9,found solo pii [phone]
+169,"{""load_balancer"": ""nginx"", ""upstream_servers"": 4}",False,0.0,No PII detected
+170,"{""passport"": ""F0XXXX63"", ""travel_history"": ""USA,UAE,UK""}",True,1.0,found solo pii [passport]
+171,"{""last_name"": ""Patel"", ""blood_group"": ""O+""}",False,0.0,No PII detected
+172,"{""aadhar"": ""456783210987"", ""document_uploaded"": 2024-01-15""}""",False,0.0,Data parsing error
+173,"{""api_rate_limit"": 1000, ""current_usage"": 245}",False,0.0,No PII detected
+174,"{""name"": ""AnXXXXXXXXma"", ""email"": ""anXXXXXXXXma@office.in"", ""ip_address"": ""59.144.123.67""}",True,0.9,found combo pii [name+email]
+175,"{""database_connection"": ""mysql"", ""pool_size"": 20}",False,0.0,No PII detected
+176,"{""upi_id"": ""waXXet@phonepe"", ""balance_inquiry"": true}",True,0.8,found solo pii [upi_id]
+177,"{""city"": ""Nagpur"", ""timezone"": ""Asia/Kolkata""}",False,0.0,No PII detected
+178,"{""phone"": ""89XXXXXX67"", ""international_roaming"": false}",True,0.9,found solo pii [phone]
+179,"{""first_name"": ""Rakesh"", ""credit_score"": 750}",False,0.0,No PII detected
+180,"{""name"": ""SuXXXXXXXvi"", ""address"": ""123 Gandhi Nagar, Patna, 800001"", ""email"": ""suXXXXXXXvi@email.org""}",True,0.9,found combo pii [name+email]
+181,"{""message_queue"": ""rabbitmq"", ""queue_depth"": 150}",False,0.0,No PII detected
+182,"{""passport"": ""V2XXXX70"", ""diplomatic_status"": false}",True,1.0,found solo pii [passport]
+183,"{""last_name"": ""Yadav"", ""experience"": ""5 years""}",False,0.0,No PII detected
+184,"{""aadhar"": ""567894321098"", ""address_change_request"": pending""}""",False,0.0,Data parsing error
+185,"{""security_scan"": ""passed"", ""vulnerabilities_found"": 0}",False,0.0,No PII detected
+186,"{""name"": ""RiXXXXXXgh"", ""phone"": ""67XXXXXX45"", ""email"": ""riXXXXXXgh@company.com""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+187,"{""container_registry"": ""docker_hub"", ""image_version"": ""v1.2.3""}",False,0.0,No PII detected
+188,"{""upi_id"": ""32XXXXXX54@paytm"", ""pin_change_required"": false}",True,0.8,found solo pii [upi_id]
+189,"{""city"": ""Chandigarh"", ""weather_forecast"": ""sunny""}",False,0.0,No PII detected
+190,"{""phone"": ""76XXXXXX34"", ""fiber_connection"": true}",True,0.9,found solo pii [phone]
+191,"{""first_name"": ""Manoj"", ""vehicle_type"": ""sedan""}",False,0.0,No PII detected
+192,"{""name"": ""Kavitha Reddy"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+193,"{""elastic_search"": ""cluster_healthy"", ""nodes"": 5}",False,0.0,No PII detected
+194,"{""passport"": ""J9XXXX10"", ""minor_dependent"": false}",True,1.0,found solo pii [passport]
+195,"{""last_name"": ""Jain"", ""dietary_preference"": ""vegetarian""}",False,0.0,No PII detected
+196,"{""aadhar"": ""67XXXXXXXX09"", ""family_head"": true}",True,1.0,found solo pii [aadhar]
+197,"{""prometheus_metric"": ""http_requests_total"", ""value"": 50000}",False,0.0,No PII detected
+198,"{""name"": ""AbXXXXXXXXXXXri"", ""email"": ""abXXXXXXXXXXXri@work.com"", ""device_type"": ""Mobile""}",True,0.9,found combo pii [name+email]
+199,"{""grafana_dashboard"": ""system_overview"", ""panels"": 12}",False,0.0,No PII detected
+200,"{""upi_id"": ""saXXXgs@unionbank"", ""interest_rate"": 3.5}",True,0.8,found solo pii [upi_id]
+201,"{""city"": ""Bhopal"", ""air_quality"": ""moderate""}",False,0.0,No PII detected
+202,"{""phone"": ""90XXXXXX78"", ""plan_type"": ""postpaid""}",True,0.9,found solo pii [phone]
+203,"{""first_name"": ""Shalini"", ""favorite_color"": ""blue""}",False,0.0,No PII detected
+204,"{""name"": ""Rohit Malhotra"", ""address"": ""789 CP Street, New Delhi, 110001"", ""phone"": ""81XXXXXX90""}",True,0.9,found solo pii [phone]
+205,"{""jenkins_build"": ""successful"", ""build_number"": 156}",False,0.0,No PII detected
+206,"{""passport"": ""C4702581"", ""renewal_due"": 2025-06-15""}""",False,0.0,Data parsing error
+207,"{""last_name"": ""Chopra"", ""shoe_size"": 9}",False,0.0,No PII detected
+208,"{""aadhar"": ""78XXXXXXXX10"", ""nomination_updated"": true}",True,1.0,found solo pii [aadhar]
+209,"{""terraform_state"": ""applied"", ""resources"": 23}",False,0.0,No PII detected
+210,"{""name"": ""ShXXXXXXXXXty"", ""email"": ""shXXXXXXXXXty@personal.com"", ""ip_address"": ""122.161.85.94""}",True,0.9,found combo pii [name+email]
+211,"{""ansible_playbook"": ""deploy_app"", ""tasks"": 15}",False,0.0,No PII detected
+212,"{""upi_id"": ""21XXXXXX43@ybl"", ""kyc_level"": ""full""}",True,0.8,found solo pii [upi_id]
+213,"{""city"": ""Vadodara"", ""population"": 1670000}",False,0.0,No PII detected
+214,"{""phone"": ""84XXXXXX12"", ""signal_strength"": ""-65dBm""}",True,0.9,found solo pii [phone]
+215,"{""first_name"": ""Gaurav"", ""t_shirt_size"": ""L""}",False,0.0,No PII detected
+216,"{""name"": ""MaXXXXXXXXXit"", ""address"": ""321 Film City, Mumbai, 400059"", ""email"": ""maXXXri@bollywood.com""}",True,0.9,found combo pii [name+email]
+217,"{""docker_compose"": ""version_3"", ""services"": 8}",False,0.0,No PII detected
+218,"{""passport"": ""I1XXXX32"", ""blood_type"": ""A+""}",True,1.0,found solo pii [passport]
+219,"{""last_name"": ""Bansal"", ""coffee_preference"": ""cappuccino""}",False,0.0,No PII detected
+220,"{""aadhar"": ""89XXXXXXXX21"", ""senior_citizen"": false}",True,1.0,found solo pii [aadhar]
+221,"{""nagios_check"": ""ok"", ""last_check"": ""2024-01-20T15:30:00Z""}",False,0.0,No PII detected
+222,"{""name"": ""NiXXXXXXXXXma"", ""phone"": ""72XXXXXX90"", ""email"": ""niXXXXXXXXXma@tech.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+223,"{""zabbix_host"": ""web_server_01"", ""status"": ""monitored""}",False,0.0,No PII detected
+224,"{""upi_id"": ""buXXXXss@yesbank"", ""gst_registered"": true}",True,0.8,found solo pii [upi_id]
+225,"{""city"": ""Surat"", ""textile_hub"": true}",False,0.0,No PII detected
+226,"{""phone"": ""93XXXXXX12"", ""voicemail_enabled"": false}",True,0.9,found solo pii [phone]
+227,"{""first_name"": ""Pooja"", ""pet_name"": ""Bruno""}",False,0.0,No PII detected
+228,"{""name"": ""Kiran Kumar"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+229,"{""splunk_index"": ""main"", ""events_per_day"": 1000000}",False,0.0,No PII detected
+230,"{""passport"": ""O8XXXX37"", ""dual_citizenship"": false}",True,1.0,found solo pii [passport]
+231,"{""last_name"": ""Agrawal"", ""music_preference"": ""classical""}",False,0.0,No PII detected
+232,"{""aadhar"": ""90XXXXXXXX32"", ""disability_certificate"": false}",True,1.0,found solo pii [aadhar]
+233,"{""elk_stack"": ""7.10.2"", ""log_retention"": ""30_days""}",False,0.0,No PII detected
+234,"{""name"": ""SwXXXXXXXda"", ""email"": ""swXXXXXXXda@university.ac.in"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+235,"{""redis_cache"": ""cluster_mode"", ""memory_usage"": ""2.1GB""}",False,0.0,No PII detected
+236,"{""upi_id"": ""10XXXXXX32@paytm"", ""fraud_alert"": false}",True,0.8,found solo pii [upi_id]
+237,"{""city"": ""Jodhpur"", ""heritage_site"": true}",False,0.0,No PII detected
+238,"{""phone"": ""86XXXXXX34"", ""emergency_contact"": true}",True,0.9,found solo pii [phone]
+239,"{""first_name"": ""Arpit"", ""gaming_preference"": ""FPS""}",False,0.0,No PII detected
+240,"{""name"": ""Geeta Patel"", ""address"": ""987 Law Garden Road, Ahmedabad, 380006"", ""phone"": ""68XXXXXX57""}",True,0.9,found solo pii [phone]
+241,"{""memcached"": ""1.6.9"", ""hit_ratio"": 0.84}",False,0.0,No PII detected
+242,"{""passport"": ""U6XXXX29"", ""organ_donor"": true}",True,1.0,found solo pii [passport]
+243,"{""last_name"": ""Kulkarni"", ""sports_preference"": ""cricket""}",False,0.0,No PII detected
+244,"{""aadhar"": ""01XXXXXXXX43"", ""pan_linked"": true}",True,1.0,found solo pii [aadhar]
+245,"{""fluentd_buffer"": ""file"", ""buffer_size"": ""256MB""}",False,0.0,No PII detected
+246,"{""name"": ""TaXXXXXXel"", ""email"": ""taXXXXXXel@startup.io"", ""ip_address"": ""49.15.227.83""}",True,0.9,found combo pii [name+email]
+247,"{""haproxy_backend"": ""app_servers"", ""active_servers"": 6}",False,0.0,No PII detected
+248,"{""upi_id"": ""09XXXXXX21@okaxis"", ""reward_points"": 2500}",True,0.8,found solo pii [upi_id]
+249,"{""city"": ""Agra"", ""monument"": ""Taj Mahal""}",False,0.0,No PII detected
+250,"{""phone"": ""77XXXXXX45"", ""data_plan"": ""unlimited""}",True,0.9,found solo pii [phone]
+251,"{""first_name"": ""Shruti"", ""zodiac_sign"": ""Leo""}",False,0.0,No PII detected
+252,"{""name"": ""VaXXXXXXXXan"", ""address"": ""123 Linking Road, Mumbai, 400050"", ""email"": ""vaXun@actor.com""}",True,0.9,found combo pii [name+email]
+253,"{""cassandra_cluster"": ""3_nodes"", ""replication_factor"": 3}",False,0.0,No PII detected
+254,"{""passport"": ""Z3XXXX70"", ""machine_readable"": true}",True,1.0,found solo pii [passport]
+255,"{""last_name"": ""Sinha"", ""reading_habit"": ""fiction""}",False,0.0,No PII detected
+256,"{""aadhar"": ""12XXXXXXXX32"", ""uan_linked"": true}",True,1.0,found solo pii [aadhar]
+257,"{""neo4j_database"": ""graph_analytics"", ""node_count"": 50000}",False,0.0,No PII detected
+258,"{""name"": ""RiXXXXXXXXXXXkh"", ""phone"": ""98XXXXXX10"", ""email"": ""riXXsh@film.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+259,"{""apache_kafka"": ""2.8.0"", ""topics"": 25}",False,0.0,No PII detected
+260,"{""upi_id"": ""98XXXXXX10@ibl"", ""standing_instruction"": true}",True,0.8,found solo pii [upi_id]
+261,"{""city"": ""Guwahati"", ""tea_capital"": true}",False,0.0,No PII detected
+262,"{""phone"": ""61XXXXXX89"", ""hotspot_enabled"": true}",True,0.9,found solo pii [phone]
+263,"{""first_name"": ""Tanvi"", ""dance_form"": ""bharatanatyam""}",False,0.0,No PII detected
+264,"{""name"": ""Sachin Tendulkar"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+265,"{""airflow_dag"": ""data_pipeline"", ""schedule_interval"": ""@daily""}",False,0.0,No PII detected
+266,"{""passport"": ""W9XXXX13"", ""special_endorsement"": false}",True,1.0,found solo pii [passport]
+267,"{""last_name"": ""Pandey"", ""cooking_skill"": ""intermediate""}",False,0.0,No PII detected
+268,"{""aadhar"": ""23XXXXXXXX43"", ""ration_card_linked"": true}",True,1.0,found solo pii [aadhar]
+269,"{""spark_cluster"": ""4_workers"", ""memory"": ""16GB""}",False,0.0,No PII detected
+270,"{""name"": ""AlXXXXXXtt"", ""email"": ""****@bollywood.in"", ""device_type"": ""iPhone""}",True,0.9,found combo pii [name+email]
+271,"{""hdfs_replication"": 3, ""block_size"": ""128MB""}",False,0.0,No PII detected
+272,"{""upi_id"": ""87XXXXXX09@ybl"", ""max_transaction_limit"": 200000}",True,0.8,found solo pii [upi_id]
+273,"{""city"": ""Dehradun"", ""hill_station"": true}",False,0.0,No PII detected
+274,"{""phone"": ""95XXXXXX23"", ""call_forwarding"": false}",True,0.9,found solo pii [phone]
+275,"{""first_name"": ""Yash"", ""favorite_cuisine"": ""Italian""}",False,0.0,No PII detected
+276,"{""name"": ""Deepika Padukone"", ""address"": ""789 Bandra West, Mumbai, 400050"", ""phone"": ""89XXXXXX67""}",True,0.9,found solo pii [phone]
+277,"{""mongodb_replica"": ""primary"", ""oplog_size"": ""2GB""}",False,0.0,No PII detected
+278,"{""passport"": ""E4XXXX81"", ""chip_enabled"": true}",True,1.0,found solo pii [passport]
+279,"{""last_name"": ""Gupta"", ""travel_frequency"": ""frequent""}",False,0.0,No PII detected
+280,"{""aadhar"": ""34XXXXXXXX43"", ""voter_id_linked"": true}",True,1.0,found solo pii [aadhar]
+281,"{""postgresql_version"": ""13.4"", ""extensions"": ""postgis,pg_stat_statements""}",False,0.0,No PII detected
+282,"{""name"": ""RaXXXXXXXXXor"", ""email"": ""raXXir@movies.com"", ""ip_address"": ""117.196.148.205""}",True,0.9,found combo pii [name+email]
+283,"{""consul_cluster"": ""3_agents"", ""leader_election"": true}",False,0.0,No PII detected
+284,"{""upi_id"": ""76XXXXXX98@paytm"", ""mobile_banking"": true}",True,0.8,found solo pii [upi_id]
+285,"{""city"": ""Shimla"", ""altitude"": ""2205m""}",False,0.0,No PII detected
+286,"{""phone"": ""82XXXXXX90"", ""wifi_calling"": true}",True,0.9,found solo pii [phone]
+287,"{""first_name"": ""Ishita"", ""language_skills"": ""Hindi,English,French""}",False,0.0,No PII detected
+288,"{""name"": ""HrXXXXXXXXXXan"", ""address"": ""321 Juhu Beach, Mumbai, 400049"", ""email"": ""hrXXXik@superstar.in""}",True,0.9,found combo pii [name+email]
+289,"{""vault_secrets"": ""encrypted"", ""policies"": 8}",False,0.0,No PII detected
+290,"{""passport"": ""D7XXXX29"", ""photo_biometric"": true}",True,1.0,found solo pii [passport]
+291,"{""last_name"": ""Saxena"", ""workout_routine"": ""yoga""}",False,0.0,No PII detected
+292,"{""aadhar"": ""45XXXXXXXX43"", ""driving_license_linked"": true}",True,1.0,found solo pii [aadhar]
+293,"{""kubernetes_ingress"": ""nginx"", ""ssl_termination"": true}",False,0.0,No PII detected
+294,"{""name"": ""KaXXXXXXXXif"", ""phone"": ""71XXXXXX90"", ""email"": ""kaXXXna@actress.com""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+295,"{""etcd_cluster"": ""healthy"", ""raft_applied_index"": 1000000}",False,0.0,No PII detected
+296,"{""upi_id"": ""65XXXXXX87@okaxis"", ""joint_account"": false}",True,0.8,found solo pii [upi_id]
+297,"{""city"": ""Manali"", ""skiing_season"": ""winter""}",False,0.0,No PII detected
+298,"{""phone"": ""97XXXXXX45"", ""conference_calling"": true}",True,0.9,found solo pii [phone]
+299,"{""first_name"": ""Naman"", ""programming_language"": ""Python""}",False,0.0,No PII detected
+300,"{""name"": ""Priyanka Chopra"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+301,"{""istio_mesh"": ""enabled"", ""sidecar_injection"": true}",False,0.0,No PII detected
+302,"{""passport"": ""K1XXXX74"", ""rfid_enabled"": true}",True,1.0,found solo pii [passport]
+303,"{""last_name"": ""Tiwari"", ""meditation_practice"": ""mindfulness""}",False,0.0,No PII detected
+304,"{""aadhar"": ""56XXXXXXXX09"", ""health_insurance_linked"": true}",True,1.0,found solo pii [aadhar]
+305,"{""linkerd_proxy"": ""stable-2.11.1"", ""success_rate"": 99.9}",False,0.0,No PII detected
+306,"{""name"": ""AkXXXXXXXXar"", ""email"": ""akXXay@actionhero.in"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+307,"{""opentelemetry"": ""enabled"", ""traces_per_second"": 1000}",False,0.0,No PII detected
+308,"{""upi_id"": ""54XXXXXX76@ybl"", ""credit_card_linked"": true}",True,0.8,found solo pii [upi_id]
+309,"{""city"": ""Ooty"", ""tea_gardens"": true}",False,0.0,No PII detected
+310,"{""phone"": ""80XXXXXX78"", ""5g_enabled"": true}",True,0.9,found solo pii [phone]
+311,"{""first_name"": ""Sneha"", ""fitness_goal"": ""weight_loss""}",False,0.0,No PII detected
+312,"{""name"": ""Salman Khan"", ""address"": ""987 Galaxy Apartments, Mumbai, 400050"", ""phone"": ""91XXXXXX80""}",True,0.9,found solo pii [phone]
+313,"{""jaeger_tracing"": ""distributed"", ""spans_collected"": 50000}",False,0.0,No PII detected
+314,"{""passport"": ""M8XXXX41"", ""biometric_exit"": true}",True,1.0,found solo pii [passport]
+315,"{""last_name"": ""Mahajan"", ""hobby"": ""painting""}",False,0.0,No PII detected
+316,"{""aadhar"": ""67XXXXXXXX10"", ""life_insurance_linked"": true}",True,1.0,found solo pii [aadhar]
+317,"{""zipkin_spans"": ""sampled"", ""sampling_rate"": 0.1}",False,0.0,No PII detected
+318,"{""name"": ""AaXXXXXXan"", ""email"": ""aaXir@perfectionist.com"", ""ip_address"": ""14.139.67.143""}",True,0.9,found combo pii [name+email]
+319,"{""flagger_canary"": ""progressive"", ""success_threshold"": 99}",False,0.0,No PII detected
+320,"{""upi_id"": ""43XXXXXX65@paytm"", ""fixed_deposit_linked"": true}",True,0.8,found solo pii [upi_id]
+321,"{""city"": ""Nainital"", ""lake_city"": true}",False,0.0,No PII detected
+322,"{""phone"": ""73XXXXXX01"", ""volte_enabled"": true}",True,0.9,found solo pii [phone]
+323,"{""first_name"": ""Rajat"", ""investment_portfolio"": ""balanced""}",False,0.0,No PII detected
+324,"{""name"": ""ShXXXXXXXXXXan"", ""address"": ""123 Mannat, Mumbai, 400050"", ""email"": ""****@kingkhan.in""}",True,0.9,found combo pii [name+email]
+325,"{""argo_cd"": ""v2.4.0"", ""applications"": 15}",False,0.0,No PII detected
+326,"{""passport"": ""A7XXXX64"", ""fast_track_eligible"": true}",True,1.0,found solo pii [passport]
+327,"{""last_name"": ""Verma"", ""social_media"": ""LinkedIn""}",False,0.0,No PII detected
+328,"{""order_id"": ""ORD123456"", ""product_category"": ""Electronics"", ""status"": ""delivered""}",False,0.0,No PII detected
+329,"{""transaction_id"": ""TXN789012"", ""payment_method"": ""credit_card"", ""amount"": 15000}",False,0.0,No PII detected
+330,"{""product_sku"": ""SKU456789"", ""brand"": ""Samsung"", ""rating"": 4.5}",False,0.0,No PII detected
+331,"{""campaign_id"": ""CAM123"", ""click_rate"": 0.045, ""conversion"": 0.12}",False,0.0,No PII detected
+332,"{""session_id"": ""SESS456"", ""page_views"": 8, ""bounce_rate"": 0.25}",False,0.0,No PII detected
+333,"{""warehouse_code"": ""WH001"", ""inventory_level"": 150, ""reorder_point"": 50}",False,0.0,No PII detected
+334,"{""coupon_code"": ""SAVE20"", ""discount_percentage"": 20, ""usage_limit"": 1000}",False,0.0,No PII detected
+335,"{""api_key"": ""API789"", ""requests_per_minute"": 500, ""quota_exceeded"": false}",False,0.0,No PII detected
+336,"{""batch_id"": ""BATCH123"", ""processed_records"": 50000, ""error_count"": 12}",False,0.0,No PII detected
+337,"{""log_entry"": ""INFO"", ""timestamp"": ""2024-01-20T10:30:00Z"", ""module"": ""payment_service""}",False,0.0,No PII detected
+338,"{""metric_name"": ""response_time"", ""value"": 120, ""unit"": ""milliseconds""}",False,0.0,No PII detected
+339,"{""feature_flag"": ""new_checkout"", ""enabled"": true, ""rollout_percentage"": 50}",False,0.0,No PII detected
+340,"{""service_name"": ""user_service"", ""version"": ""v2.1.0"", ""health_status"": ""healthy""}",False,0.0,No PII detected
+341,"{""database_name"": ""primary"", ""connection_pool"": 20, ""active_connections"": 15}",False,0.0,No PII detected
+342,"{""queue_name"": ""order_processing"", ""message_count"": 245, ""consumers"": 3}",False,0.0,No PII detected
+343,"{""cache_key"": ""user_profile_123"", ""ttl"": 3600, ""hit_ratio"": 0.85}",False,0.0,No PII detected
+344,"{""deployment_id"": ""DEP456"", ""environment"": ""production"", ""rollback_available"": true}",False,0.0,No PII detected
+345,"{""alert_id"": ""ALT789"", ""severity"": ""warning"", ""acknowledged"": false}",False,0.0,No PII detected
+346,"{""backup_id"": ""BAK123"", ""size"": ""2.5GB"", ""verification"": ""passed""}",False,0.0,No PII detected
+347,"{""test_suite"": ""integration_tests"", ""passed"": 145, ""failed"": 3}",False,0.0,No PII detected
+348,"{""build_number"": ""BUILD789"", ""commit_hash"": ""abc123def"", ""deployment_time"": ""2024-01-20T14:25:00Z""}",False,0.0,No PII detected
+349,"{""region"": ""ap-south-1"", ""availability_zone"": ""ap-south-1a"", ""instance_type"": ""t3.medium""}",False,0.0,No PII detected
+350,"{""security_scan"": ""vulnerability_assessment"", ""high_risk"": 0, ""medium_risk"": 2}",False,0.0,No PII detected
+351,"{""load_balancer"": ""ALB"", ""target_groups"": 2, ""healthy_targets"": 6}",False,0.0,No PII detected
+352,"{""cdn_provider"": ""CloudFront"", ""cache_hit_ratio"": 0.92, ""origin_requests"": 1500}",False,0.0,No PII detected
+353,"{""ssl_certificate"": ""wildcard"", ""issuer"": ""Let's Encrypt"", ""expiry"": ""2024-12-31""}",False,0.0,No PII detected
+354,"{""monitoring_dashboard"": ""system_overview"", ""widgets"": 12, ""refresh_interval"": 30}",False,0.0,No PII detected
+355,"{""compliance_check"": ""gdpr"", ""status"": ""compliant"", ""last_audit"": ""2024-01-01""}",False,0.0,No PII detected
+356,"{""machine_learning_model"": ""recommendation_engine"", ""accuracy"": 0.89, ""training_data"": ""1M_samples""}",False,0.0,No PII detected
+357,"{""data_pipeline"": ""etl_daily"", ""source"": ""mongodb"", ""destination"": ""data_warehouse""}",False,0.0,No PII detected
+358,"{""kubernetes_pod"": ""api-deployment-abc123"", ""cpu_usage"": ""65%"", ""memory_usage"": ""512MB""}",False,0.0,No PII detected
+359,"{""docker_image"": ""app:v1.2.3"", ""size"": ""150MB"", ""layers"": 8}",False,0.0,No PII detected
+360,"{""git_branch"": ""feature/new-ui"", ""commits_ahead"": 5, ""merge_conflicts"": false}",False,0.0,No PII detected
+361,"{""network_interface"": ""eth0"", ""bytes_in"": 1048576, ""bytes_out"": 524288}",False,0.0,No PII detected
+362,"{""file_system"": ""/dev/sda1"", ""total_space"": ""100GB"", ""free_space"": ""25GB""}",False,0.0,No PII detected
+363,"{""process_id"": ""12345"", ""cpu_time"": ""2.5s"", ""memory_usage"": ""256MB""}",False,0.0,No PII detected
+364,"{""thread_pool"": ""worker_threads"", ""active_threads"": 8, ""queue_size"": 15}",False,0.0,No PII detected
+365,"{""garbage_collection"": ""G1GC"", ""pause_time"": ""10ms"", ""frequency"": ""every_30s""}",False,0.0,No PII detected
+366,"{""connection_string"": ""postgresql://localhost:5432/app_db"", ""max_connections"": 100, ""current_connections"": 45}",False,0.0,No PII detected
+367,"{""search_index"": ""products_v2"", ""document_count"": 1000000, ""size"": ""2.1GB""}",False,0.0,No PII detected
+368,"{""message_broker"": ""RabbitMQ"", ""exchange_type"": ""topic"", ""routing_key"": ""order.created""}",False,0.0,No PII detected
+369,"{""streaming_platform"": ""Apache Kafka"", ""partition_count"": 12, ""replication_factor"": 3}",False,0.0,No PII detected
+370,"{""container_orchestrator"": ""Kubernetes"", ""namespace"": ""production"", ""pod_count"": 25}",False,0.0,No PII detected
+371,"{""microservice_architecture"": ""event_driven"", ""service_count"": 15, ""communication"": ""async""}",False,0.0,No PII detected
+372,"{""api_gateway"": ""Kong"", ""rate_limiting"": ""1000_rpm"", ""authentication"": ""JWT""}",False,0.0,No PII detected
+373,"{""service_mesh"": ""Istio"", ""sidecar_proxy"": ""Envoy"", ""mTLS_enabled"": true}",False,0.0,No PII detected
+374,"{""observability_stack"": ""ELK"", ""log_retention"": ""30_days"", ""alert_rules"": 25}",False,0.0,No PII detected
+375,"{""aadhar"": ""78XXXXXXXX81"", ""address_verification"": ""completed"", ""timestamp"": ""2024-01-20T09:15:00Z""}",True,1.0,found solo pii [aadhar]
+376,"{""name"": ""ArXXXXXXXXor"", ""email"": ""arXXXXXXXXor@film.in"", ""address"": ""456 Film City Road, Mumbai, 400059""}",True,0.9,found combo pii [name+email]
+377,"{""phone"": ""98XXXXXX10"", ""carrier_name"": ""Airtel"", ""plan_type"": ""postpaid""}",True,0.9,found solo pii [phone]
+378,"{""upi_id"": ""arXXXX23@paytm"", ""linked_bank"": ""HDFC Bank"", ""kyc_status"": ""verified""}",True,0.8,found solo pii [upi_id]
+379,"{""passport"": ""P9XXXX43"", ""issue_place"": ""Mumbai"", ""validity"": ""10_years""}",True,1.0,found solo pii [passport]
+380,"{""name"": ""SoXXXXXXXta"", ""phone"": ""87XXXXXX09"", ""email"": ""soXam@personal.in"", ""device_type"": ""Android""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+381,"{""aadhar"": ""89XXXXXXXX90"", ""biometric_status"": ""locked"", ""unlock_required"": true}",True,1.0,found solo pii [aadhar]
+382,"{""name"": ""Vikash Singh"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+383,"{""phone"": ""76XXXXXX98"", ""international_code"": ""+91"", ""verified"": true}",True,0.9,found solo pii [phone]
+384,"{""upi_id"": ""viXXsh@okaxis"", ""transaction_pin"": ""set"", ""daily_limit"": 100000}",True,0.8,found solo pii [upi_id]
+385,"{""passport"": ""L1XXXX67"", ""photo_updated"": ""2024-01-15"", ""pages_left"": 32}",True,1.0,found solo pii [passport]
+386,"{""name"": ""MeXXXXXXXXma"", ""email"": ""meXXXXXXXXma@office.com"", ""department"": ""HR""}",True,0.9,found combo pii [name+email]
+387,"{""aadhar"": ""90XXXXXXXX01"", ""mobile_verification"": ""pending"", ""otp_sent"": true}",True,1.0,found solo pii [aadhar]
+388,"{""name"": ""Rohit Shetty"", ""address"": ""123 Andheri West, Mumbai, 400053"", ""phone"": ""89XXXXXX67""}",True,0.9,found solo pii [phone]
+389,"{""phone"": ""67XXXXXX45"", ""sms_service"": ""enabled"", ""promotional_consent"": false}",True,0.9,found solo pii [phone]
+390,"{""upi_id"": ""roXXXX89@ybl"", ""beneficiary_limit"": 20, ""recent_transaction"": ""2024-01-20""}",True,0.8,found solo pii [upi_id]
+391,"{""passport"": ""A8XXXX32"", ""emergency_contact_name"": ""Priya Shetty"", ""relationship"": ""spouse""}",True,1.0,found solo pii [passport]
+392,"{""name"": ""KaXXXXXXXXXXan"", ""email"": ""kaXya@actress.in"", ""ip_address"": ""117.196.152.38""}",True,0.9,found combo pii [name+email]
+393,"{""aadhar"": ""01XXXXXXXX12"", ""demographic_auth"": ""success"", ""attempt_count"": 1}",True,1.0,found solo pii [aadhar]
+394,"{""name"": ""AjXXXXXXXan"", ""address"": ""567 Juhu Scheme, Mumbai, 400049"", ""email"": ""****@action.com""}",True,0.9,found combo pii [name+email]
+395,"{""phone"": ""92XXXXXX01"", ""call_log_consent"": true, ""privacy_setting"": ""medium""}",True,0.9,found solo pii [phone]
+396,"{""upi_id"": ""****@icici"", ""merchant_payments"": 15, ""last_settlement"": ""2024-01-19""}",True,0.8,found solo pii [upi_id]
+397,"{""passport"": ""H9XXXX43"", ""visa_pages"": 8, ""endorsement_pages"": 2}",True,1.0,found solo pii [passport]
+398,"{""name"": ""TaXXXXXan"", ""phone"": ""81XXXXXX89"", ""email"": ""****@versatile.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+399,"{""aadhar"": ""12XXXXXXXX23"", ""bank_seeding"": ""completed"", ""subsidy_linked"": true}",True,1.0,found solo pii [aadhar]
+400,"{""name"": ""Nawazuddin Siddiqui"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+401,"{""phone"": ""78XXXXXX56"", ""roaming_activated"": true, ""international_plan"": ""active""}",True,0.9,found solo pii [phone]
+402,"{""upi_id"": ""naXaz@sbi"", ""family_account"": true, ""members_linked"": 4}",True,0.8,found solo pii [upi_id]
+403,"{""passport"": ""T5XXXX01"", ""chip_technology"": ""enabled"", ""security_features"": ""enhanced""}",True,1.0,found solo pii [passport]
+404,"{""name"": ""KoXXXXXXXen"", ""email"": ""koXXXna@independent.in"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+405,"{""aadhar"": ""23XXXXXXXX34"", ""disability_flag"": false, ""senior_citizen"": false}",True,1.0,found solo pii [aadhar]
+406,"{""name"": ""Irrfan Khan"", ""address"": ""234 Hill Road, Mumbai, 400050"", ""phone"": ""69XXXXXX78""}",True,0.9,found solo pii [phone]
+407,"{""phone"": ""95XXXXXX34"", ""caller_tune"": ""enabled"", ""ringback_tone"": ""bollywood_classic""}",True,0.9,found solo pii [phone]
+408,"{""upi_id"": ""irXXan@phonepe"", ""insurance_premium"": ""auto_debit"", ""policy_linked"": true}",True,0.8,found solo pii [upi_id]
+409,"{""passport"": ""K8XXXX32"", ""place_of_birth"": ""Mumbai"", ""spouse_name"": ""Sutapa Sikdar""}",True,1.0,found solo pii [passport]
+410,"{""name"": ""PaXXXXXXXXXXXhi"", ""email"": ""paXXaj@character.in"", ""ip_address"": ""14.139.78.92""}",True,0.9,found combo pii [name+email]
+411,"{""aadhar"": ""34XXXXXXXX45"", ""rural_address"": false, ""urban_classification"": true}",True,1.0,found solo pii [aadhar]
+412,"{""name"": ""RaXXXXXXXXte"", ""address"": ""678 Linking Road, Mumbai, 400054"", ""email"": ""raXXXka@bold.com""}",True,0.9,found combo pii [name+email]
+413,"{""phone"": ""84XXXXXX12"", ""missed_call_alert"": true, ""call_waiting"": ""enabled""}",True,0.9,found solo pii [phone]
+414,"{""upi_id"": ""raXXXka@unionbank"", ""loan_emi"": ""auto_pay"", ""next_due"": ""2024-02-01""}",True,0.8,found solo pii [upi_id]
+415,"{""passport"": ""R2XXXX78"", ""frequent_traveler"": true, ""miles_accumulated"": 50000}",True,1.0,found solo pii [passport]
+416,"{""name"": ""AyXXXXXXXXXXXXXXna"", ""phone"": ""73XXXXXX01"", ""email"": ""ayXXXXXnn@versatile.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+417,"{""aadhar"": ""45XXXXXXXX56"", ""health_id"": ""linked"", ""vaccination_status"": ""fully_vaccinated""}",True,1.0,found solo pii [aadhar]
+418,"{""name"": ""Bhumi Pednekar"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+419,"{""phone"": ""96XXXXXX34"", ""network_type"": ""4G"", ""data_usage"": ""15GB_monthly""}",True,0.9,found solo pii [phone]
+420,"{""upi_id"": ""bhXmi@kotak"", ""savings_goal"": ""home_purchase"", ""target_amount"": 5000000}",True,0.8,found solo pii [upi_id]
+421,"{""passport"": ""S9XXXX45"", ""digital_copy"": ""available"", ""qr_code"": ""generated""}",True,1.0,found solo pii [passport]
+422,"{""name"": ""RaXXXXXXXXXao"", ""email"": ""raXXXXXar@method.in"", ""device_type"": ""Samsung""}",True,0.9,found combo pii [name+email]
+423,"{""aadhar"": ""56XXXXXXXX67"", ""aadhaar_pay"": ""enabled"", ""micro_atm"": ""registered""}",True,1.0,found solo pii [aadhar]
+424,"{""name"": ""Kriti Sanon"", ""address"": ""123 Versova, Mumbai, 400061"", ""phone"": ""87XXXXXX45""}",True,0.9,found solo pii [phone]
+425,"{""phone"": ""67XXXXXX45"", ""backup_sim"": ""inactive"", ""primary_number"": true}",True,0.9,found solo pii [phone]
+426,"{""upi_id"": ""krXti@yesbank"", ""credit_score_check"": ""monthly"", ""current_score"": 785}",True,0.8,found solo pii [upi_id]
+427,"{""passport"": ""C6XXXX12"", ""biometric_data"": ""encrypted"", ""facial_recognition"": true}",True,1.0,found solo pii [passport]
+428,"{""name"": ""KaXXXXXXXXXan"", ""email"": ""kaXXik@comedy.in"", ""ip_address"": ""203.192.168.74""}",True,0.9,found combo pii [name+email]
+429,"{""aadhar"": ""67XXXXXXXX78"", ""consent_manager"": ""registered"", ""data_sharing"": ""limited""}",True,1.0,found solo pii [aadhar]
+430,"{""name"": ""AnXXXXXXXXXay"", ""address"": ""456 Bandra Bandstand, Mumbai, 400050"", ""email"": ""anXXya@gen_z.com""}",True,0.9,found combo pii [name+email]
+431,"{""phone"": ""78XXXXXX56"", ""video_calling"": true, ""screen_sharing"": ""enabled""}",True,0.9,found solo pii [phone]
+432,"{""upi_id"": ""anXXya@hdfcbank"", ""student_account"": true, ""education_loan"": ""linked""}",True,0.8,found solo pii [upi_id]
+433,"{""passport"": ""N3XXXX89"", ""minor_passport"": false, ""guardian_details"": ""not_applicable""}",True,1.0,found solo pii [passport]
+434,"{""name"": ""TiXXXXXXXXff"", ""phone"": ""89XXXXXX67"", ""email"": ""tiXer@action.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+435,"{""aadhar"": ""78XXXXXXXX89"", ""fitness_tracker"": ""linked"", ""health_records"": ""digital""}",True,1.0,found solo pii [aadhar]
+436,"{""name"": ""Disha Patani"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+437,"{""phone"": ""90XXXXXX78"", ""ai_assistant"": ""enabled"", ""voice_recognition"": true}",True,0.9,found solo pii [phone]
+438,"{""upi_id"": ""diXha@axis"", ""fashion_expenses"": ""tracked"", ""budget_alert"": true}",True,0.8,found solo pii [upi_id]
+439,"{""passport"": ""D7XXXX23"", ""travel_insurance"": ""comprehensive"", ""coverage"": ""worldwide""}",True,1.0,found solo pii [passport]
+440,"{""name"": ""ViXXXXXXXXXal"", ""email"": ""viXky@intense.in"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+441,"{""aadhar"": ""89XXXXXXXX90"", ""military_service"": ""eligible"", ""ncc_certificate"": true}",True,1.0,found solo pii [aadhar]
+442,"{""name"": ""Kiara Advani"", ""address"": ""321 Juhu Tara Road, Mumbai, 400049"", ""phone"": ""71XXXXXX90""}",True,0.9,found solo pii [phone]
+443,"{""phone"": ""82XXXXXX90"", ""conference_call"": ""premium"", ""participants_limit"": 50}",True,0.9,found solo pii [phone]
+444,"{""upi_id"": ""kiXra@indianbank"", ""jewelry_insurance"": ""active"", ""premium"": ""monthly""}",True,0.8,found solo pii [upi_id]
+445,"{""passport"": ""V4XXXX90"", ""diplomatic_immunity"": false, ""official_travel"": ""business""}",True,1.0,found solo pii [passport]
+446,"{""name"": ""SiXXXXXXXXXXXXXra"", ""email"": ""siXXXXth@romantic.in"", ""ip_address"": ""59.144.219.83""}",True,0.9,found combo pii [name+email]
+447,"{""aadhar"": ""90XXXXXXXX01"", ""property_registration"": ""linked"", ""stamp_duty"": ""paid""}",True,1.0,found solo pii [aadhar]
+448,"{""name"": ""ShXXXXXXXXXXXor"", ""address"": ""654 Lokhandwala, Mumbai, 400053"", ""email"": ""shXXXXha@melodious.com""}",True,0.9,found combo pii [name+email]
+449,"{""phone"": ""93XXXXXX12"", ""music_streaming"": ""premium"", ""offline_downloads"": 500}",True,0.9,found solo pii [phone]
+450,"{""upi_id"": ""shXXXXha@pnb"", ""concert_tickets"": ""auto_book"", ""artist_alerts"": true}",True,0.8,found solo pii [upi_id]
+451,"{""passport"": ""U8XXXX34"", ""artist_visa"": ""multi_entry"", ""performance_permit"": true}",True,1.0,found solo pii [passport]
+452,"{""name"": ""VaXXXXXXXXma"", ""phone"": ""84XXXXXX12"", ""email"": ""vaXun@comedy.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+453,"{""aadhar"": ""01XXXXXXXX12"", ""comedy_club"": ""member"", ""performance_rights"": ""registered""}",True,1.0,found solo pii [aadhar]
+454,"{""name"": ""Janhvi Kapoor"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+455,"{""phone"": ""75XXXXXX23"", ""fashion_alerts"": true, ""brand_notifications"": ""selective""}",True,0.9,found solo pii [phone]
+456,"{""upi_id"": ""jaXXvi@canara"", ""designer_payments"": ""frequent"", ""luxury_limit"": 1000000}",True,0.8,found solo pii [upi_id]
+457,"{""passport"": ""F5XXXX01"", ""fashion_week"": ""participant"", ""designer_collaboration"": true}",True,1.0,found solo pii [passport]
+458,"{""name"": ""ArXXXXXXXdy"", ""email"": ""arXun@intense.in"", ""device_type"": ""OnePlus""}",True,0.9,found combo pii [name+email]
+459,"{""aadhar"": ""12XXXXXXXX23"", ""medical_college"": ""alumni"", ""practicing_license"": ""valid""}",True,1.0,found solo pii [aadhar]
+460,"{""name"": ""Rashmika Mandanna"", ""address"": ""234 Banjara Hills, Hyderabad, 500034"", ""phone"": ""96XXXXXX34""}",True,0.9,found solo pii [phone]
+461,"{""phone"": ""68XXXXXX56"", ""regional_content"": ""Telugu"", ""dubbing_preference"": ""original""}",True,0.9,found solo pii [phone]
+462,"{""upi_id"": ""raXXXXka@sbi"", ""south_cinema"": ""promotions"", ""fan_engagement"": ""high""}",True,0.8,found solo pii [upi_id]
+463,"{""passport"": ""G6XXXX12"", ""regional_cinema"": ""ambassador"", ""cultural_exchange"": true}",True,1.0,found solo pii [passport]
+464,"{""name"": ""AlXXXXXXun"", ""email"": ""****@stylish.in"", ""ip_address"": ""14.139.89.156""}",True,0.9,found combo pii [name+email]
+465,"{""aadhar"": ""23XXXXXXXX34"", ""dance_academy"": ""owner"", ""choreography_rights"": ""exclusive""}",True,1.0,found solo pii [aadhar]
+466,"{""name"": ""SaXXXXXXXXXXXXXni"", ""address"": ""567 Film Nagar, Hyderabad, 500096"", ""email"": ""saXXXXha@versatile.in""}",True,0.9,found combo pii [name+email]
+467,"{""phone"": ""89XXXXXX67"", ""charity_work"": ""active"", ""foundation_calls"": ""priority""}",True,0.9,found solo pii [phone]
+468,"{""upi_id"": ""saXXXXha@hdfc"", ""donation_auto"": ""monthly"", ""cause"": ""women_empowerment""}",True,0.8,found solo pii [upi_id]
+469,"{""passport"": ""I9XXXX45"", ""humanitarian_visa"": ""active"", ""ngo_collaboration"": true}",True,1.0,found solo pii [passport]
+470,"{""name"": ""RaXXXXXXan"", ""phone"": ""72XXXXXX90"", ""email"": ""****@megastar.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+471,"{""aadhar"": ""34XXXXXXXX45"", ""horse_racing"": ""license"", ""stable_owner"": true}",True,1.0,found solo pii [aadhar]
+472,"{""name"": ""Jr NTR"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+473,"{""phone"": ""83XXXXXX01"", ""political_updates"": ""subscribed"", ""rally_notifications"": true}",True,0.9,found solo pii [phone]
+474,"{""upi_id"": ""****@andhra"", ""political_donations"": ""transparent"", ""party_fund"": ""contributor""}",True,0.8,found solo pii [upi_id]
+475,"{""passport"": ""J0XXXX56"", ""political_visa"": ""diplomatic"", ""state_visits"": ""official""}",True,1.0,found solo pii [passport]
+476,"{""name"": ""MaXXXXXXXbu"", ""email"": ""maXXsh@superstar.in"", ""device_id"": ""[REDACTED_DEVICE_ID]""}",True,1.0,"found combo pii [name+email], found combo pii [name+device_id]"
+477,"{""aadhar"": ""45XXXXXXXX56"", ""production_house"": ""owner"", ""film_financing"": ""independent""}",True,1.0,found solo pii [aadhar]
+478,"{""name"": ""Prabhas Raju"", ""address"": ""123 Banjara Hills, Hyderabad, 500034"", ""phone"": ""94XXXXXX12""}",True,0.9,found solo pii [phone]
+479,"{""phone"": ""76XXXXXX34"", ""pan_india"": ""stardom"", ""multilingual_alerts"": true}",True,0.9,found solo pii [phone]
+480,"{""upi_id"": ""prXXXas@federal"", ""movie_budget"": ""international"", ""currency"": ""multi""}",True,0.8,found solo pii [upi_id]
+481,"{""passport"": ""B3XXXX89"", ""international_filming"": ""permitted"", ""visa_facilitation"": true}",True,1.0,found solo pii [passport]
+482,"{""name"": ""RaXXXXXXXXXXti"", ""email"": ""****@versatile.in"", ""ip_address"": ""203.192.147.29""}",True,0.9,found combo pii [name+email]
+483,"{""aadhar"": ""56XXXXXXXX67"", ""visual_effects"": ""studio_owner"", ""technology_innovator"": true}",True,1.0,found solo pii [aadhar]
+484,"{""name"": ""AnXXXXXXXXXXty"", ""address"": ""456 Filmnagar, Hyderabad, 500096"", ""email"": ""anXXXka@baahubali.in""}",True,0.9,found combo pii [name+email]
+485,"{""phone"": ""85XXXXXX23"", ""fitness_regime"": ""strict"", ""trainer_calls"": ""daily""}",True,0.9,found solo pii [phone]
+486,"{""upi_id"": ""anXXXka@karnataka"", ""fitness_equipment"": ""premium"", ""health_monitoring"": ""advanced""}",True,0.8,found solo pii [upi_id]
+487,"{""passport"": ""E4XXXX90"", ""fitness_travel"": ""wellness"", ""spa_treatments"": ""international""}",True,1.0,found solo pii [passport]
+488,"{""name"": ""TaXXXXXXXXXXXXia"", ""phone"": ""97XXXXXX45"", ""email"": ""taXXXXah@glamorous.in""}",True,1.0,"found solo pii [phone], found combo pii [name+email]"
+489,"{""aadhar"": ""67XXXXXXXX78"", ""brand_ambassador"": ""multiple"", ""endorsement_value"": ""premium""}",True,1.0,found solo pii [aadhar]
+490,"{""name"": ""Kajal Aggarwal"", ""address"": ""[REDACTED_ADDRESS]"", ""ip_address"": ""[REDACTED_IP]""}",True,0.9,found combo pii [address+ip_address]
+491,"{""phone"": ""61XXXXXX89"", ""punjabi_connection"": ""cultural"", ""regional_films"": ""multilingual""}",True,0.9,found solo pii [phone]
+492,"{""upi_id"": ""kaXal@punjab"", ""cultural_events"": ""sponsor"", ""heritage_preservation"": ""donor""}",True,0.8,found solo pii [upi_id]
+493,"{""passport"": ""L7XXXX23"", ""cultural_ambassador"": ""official"", ""international_events"": ""participant""}",True,1.0,found solo pii [passport]
+494,"{""name"": ""RaXXXXXXXXXXXXXgh"", ""email"": ""raXul@fitness.in"", ""device_type"": ""iPhone_Pro""}",True,0.9,found combo pii [name+email]
+495,"{""aadhar"": ""78XXXXXXXX89"", ""fitness_influencer"": ""certified"", ""wellness_brand"": ""founder""}",True,1.0,found solo pii [aadhar]
+496,"{""name"": ""Pooja Hegde"", ""address"": ""321 Film City, Hyderabad, 500096"", ""phone"": ""82XXXXXX90""}",True,0.9,found solo pii [phone]
+497,"{""phone"": ""78XXXXXX56"", ""dance_choreography"": ""skilled"", ""performance_rights"": ""exclusive""}",True,0.9,found solo pii [phone]
+498,"{""upi_id"": ""poXja@maharashtra"", ""dance_academy"": ""investment"", ""cultural_promotion"": ""active""}",True,0.8,found solo pii [upi_id]
+499,"{""passport"": ""M8XXXX34"", ""dance_festivals"": ""judge"", ""international_recognition"": true}",True,1.0,found solo pii [passport]
+500,"{""name"": ""ReXXXXXXXXXXXXra"", ""email"": ""reXXna@multilingual.in"", ""ip_address"": ""59.144.238.195""}",True,0.9,found combo pii [name+email]

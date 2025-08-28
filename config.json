@@ -1,0 +1,45 @@
+{
+    "standalone_pii_patterns": {
+      "phone": {
+        "regex": "\\b\\d{10}\\b",
+        "base_score": 0.9,
+        "redactor": "mask_numeric"
+      },
+      "aadhar": {
+        "regex": "\\b\\d{12}\\b",
+        "base_score": 1.0,
+        "redactor": "mask_numeric"
+      },
+      "passport": {
+        "regex": "\\b[A-Z]\\d{7}\\b",
+        "base_score": 1.0,
+        "redactor": "mask_string"
+      },
+      "upi_id": {
+        "regex": "\\b[\\w.-]+@[\\w.-]+\\b",
+        "base_score": 0.8,
+        "redactor": "mask_email"
+      }
+    },
+    "combinatorial_pii_sets": {
+      "personal_details": {
+        "keys": ["name", "email"],
+        "base_score": 0.45
+      },
+      "location_details": {
+        "keys": ["address", "ip_address"],
+        "base_score": 0.45
+      },
+      "identity_and_device": {
+        "keys": ["name", "device_id"],
+        "base_score": 0.4
+      }
+    },
+    "redaction_placeholders": {
+      "address": "[REDACTED_ADDRESS]",
+      "ip_address": "[REDACTED_IP]",
+      "device_id": "[REDACTED_DEVICE_ID]",
+      "name": "mask_string",
+      "email": "mask_email"
+    }
+  }
